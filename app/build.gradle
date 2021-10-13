@@ -1,0 +1,81 @@
+plugins {
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+    // Other plugins here if pre-existing
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "bestwallpaper.hdgb.wallpapers.backgrounds"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 9
+        versionName "1.9"
+        multiDexEnabled true
+
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
+        setProperty("archivesBaseName", "HD Wallpaper-$versionName")
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            useProguard false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            shrinkResources false
+        }
+        debug {
+            debuggable true
+            useProguard false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            shrinkResources false
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.onesignal:OneSignal:4.4.2'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation platform('com.google.firebase:firebase-bom:26.6.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+     implementation 'com.github.zomato:androidphotofilters:1.0.1'
+    implementation 'org.apache.commons:commons-lang3:3.9'
+    implementation 'androidx.work:work-runtime:2.3.4'
+    implementation 'com.google.android.gms:play-services-ads:20.2.0'
+    implementation 'com.facebook.android:audience-network-sdk:5.+'
+    implementation 'com.google.firebase:firebase-crashlytics'
+}
+
+apply plugin: 'com.google.firebase.crashlytics'

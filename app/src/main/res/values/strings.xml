@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">HD Wallpaper</string>
+    <string name="app_version">1.5</string>
+
+    <string name="collections">COLLECTIONS</string>
+    <!--    Live id-->
+    <string name="facebook_banner_ad">IMG_16_9_APP_INSTALL#4285067941545449_4285070598211850</string>
+    <!--    <string name="banner_ad_unit_id">ca-app-pub-5408857979791829/7262052314</string>-->
+    <string name="app_id">ca-app-pub-5408857979791829~2958176924</string>
+    <string name="facebook_interstitial">4285067941545449_4285069684878608</string>
+    <string name="facebook_native">4285067941545449_4285071931545050</string>
+
+    <!--    Test Id-->
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+</resources>
+
+
+
+
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bestwallpaper.hdgb.wallpapers.backgrounds">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_logo_w"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_logo_w_round"
+        android:supportsRtl="true"
+        android:theme="@style/WallpaperApp"
+        android:usesCleartextTraffic="true">
+
+        <receiver
+            android:name=".Service.MyReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".Service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".FavouriteActivity" />
+        <activity android:name=".CollectionActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".CollectionWallpapersActivity" />
+        <activity android:name=".ShapesActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ViewActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/app_id" />
+    </application>
+
+</manifest>

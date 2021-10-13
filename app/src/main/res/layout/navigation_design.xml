@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_180sdp"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/appname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <bestwallpaper.hdgb.wallpapers.backgrounds.ListViewUtil
+            android:id="@+id/nav_list"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appname"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            tools:listitem="@layout/layout_setting" />
+
+    </LinearLayout>
+</RelativeLayout>

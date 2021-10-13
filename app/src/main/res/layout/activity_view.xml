@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootRL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_brown_100"
+    tools:context="bestwallpaper.hdgb.wallpapers.backgrounds.ViewActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <!--            <RelativeLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent">-->
+
+            <!--                <androidx.appcompat.widget.AppCompatImageView-->
+            <!--                    android:id="@+id/image"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:adjustViewBounds="true"-->
+            <!--                    android:scaleType="fitEnd" />-->
+
+            <!--            </RelativeLayout>-->
+
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/blankLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/gradient"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:weightSum="4.0">
+
+        <ImageView
+            android:id="@+id/back1"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_gravity="center_vertical|left"
+            android:src="@drawable/ic_back__2_" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImg"
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:elevation="@dimen/_10sdp"
+            app:cardBackgroundColor="#E5E5E5"
+            app:cardCornerRadius="@dimen/_37sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_15sdp">
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img1" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Eve Rigas"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/site"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:text="unsplash.com"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/setWallpaper"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_weight="1"
+        android:src="@drawable/ic_set_as_wallpaper" />
+
+    <RelativeLayout
+        android:id="@+id/cardRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/banner_container"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:elevation="@dimen/_5sdp"
+
+            android:visibility="visible"
+            app:cardBackgroundColor="#F1F1F1"
+            app:cardCornerRadius="@dimen/_12sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/colorRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/color_item" />
+
+                <LinearLayout
+                    android:id="@+id/newLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/colorRecycler"
+                    android:layout_marginVertical="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <ImageView
+                        android:id="@+id/vector4"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_vector__4_" />
+
+                    <ImageView
+                        android:id="@+id/gallery"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_baseline_photo_library_24"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/vector3"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_vector_3" />
+
+                    <ImageView
+                        android:id="@+id/vector2"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_vector_2" />
+
+                    <ImageView
+                        android:id="@+id/vector1"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_vector_1" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#F1F1F1"
+            app:cardCornerRadius="@dimen/_8sdp">
+
+            <RelativeLayout
+                android:id="@+id/rel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:id="@+id/seekbar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <SeekBar
+                        android:id="@+id/seekbarBrightness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:max="25"
+                        android:min="1"
+                        android:progress="10"
+                        android:progressTint="@color/black"
+                        android:thumbTint="@color/black" />
+
+                    <SeekBar
+                        android:id="@+id/seekbarBlur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:max="25"
+                        android:min="1"
+                        android:progress="100"
+                        android:progressTint="@color/black"
+                        android:thumbTint="@color/black"
+                        android:visibility="gone" />
+
+                    <SeekBar
+                        android:id="@+id/seekbarVignette"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:max="255"
+                        android:min="1"
+                        android:progress="10"
+                        android:progressTint="@color/black"
+                        android:thumbTint="@color/black"
+                        android:visibility="gone" />
+
+                    <SeekBar
+                        android:id="@+id/seekbarColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:max="255"
+                        android:min="1"
+                        android:progress="10"
+                        android:progressTint="@color/black"
+                        android:thumbTint="@color/black"
+                        android:visibility="gone" />
+
+                    <SeekBar
+                        android:id="@+id/seekbarContrast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:max="10"
+                        android:min="1"
+                        android:progress="10"
+                        android:progressTint="@color/black"
+                        android:thumbTint="@color/black"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/seekbar1"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:id="@+id/dayNight"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_vector11_black" />
+
+                    <ImageView
+                        android:id="@+id/blur"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_vector12_grey" />
+
+                    <ImageView
+                        android:id="@+id/vignette"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_vector13_grey" />
+
+                    <ImageView
+                        android:id="@+id/colorVector"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_vector14_grey" />
+
+                    <ImageView
+                        android:id="@+id/contrast"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_vector15_grey" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#F1F1F1"
+            app:cardCornerRadius="@dimen/_8sdp">
+
+            <RelativeLayout
+                android:id="@+id/rel2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:id="@+id/relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <SeekBar
+                        android:id="@+id/seekbarSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:max="2048"
+                        android:min="50"
+                        android:progress="150"
+                        android:progressTint="@color/black"
+                        android:thumbTint="@color/black"
+                        android:visibility="gone" />
+
+                    <SeekBar
+                        android:id="@+id/seekbarRotate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:max="360"
+                        android:min="0"
+                        android:progress="360"
+                        android:progressTint="@color/black"
+                        android:thumbTint="@color/black"
+                        android:visibility="gone" />
+
+                    <SeekBar
+                        android:id="@+id/seekbarOpacity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:max="255"
+                        android:min="0"
+                        android:progress="100"
+                        android:progressTint="@color/black"
+                        android:thumbTint="@color/black"
+                        android:visibility="gone" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/colorRecycler1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <ImageView
+                        android:id="@+id/resize"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_resize_grey" />
+
+                    <ImageView
+                        android:id="@+id/rotate"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_rotate_grey" />
+
+                    <ImageView
+                        android:id="@+id/opacity"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_opacity_grey" />
+
+                    <ImageView
+                        android:id="@+id/color"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_color_black" />
+
+                    <ImageView
+                        android:id="@+id/shape"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_shape_grey" />
+
+                    <ImageView
+                        android:id="@+id/delete"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_delete" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</RelativeLayout>

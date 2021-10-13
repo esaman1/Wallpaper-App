@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bestwallpaper.hdgb.wallpapers.backgrounds.SearchActivity">
+
+    <LinearLayout
+        android:id="@+id/searchPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_back2" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_bar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="@drawable/ic_rectangle_1"
+            android:drawableRight="@drawable/ic_baseline_search_24"
+            android:hint="Search Wallpapers"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_10sdp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchPanel"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_below="@id/searchPanel"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+    </LinearLayout>
+
+</RelativeLayout>
+

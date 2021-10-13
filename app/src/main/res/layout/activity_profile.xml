@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bestwallpaper.hdgb.wallpapers.backgrounds.ProfileActivity">
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/download" />
+
+    <FrameLayout
+        android:id="@+id/equalizerBlocker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/equalizer_action_container"
+        android:alpha="0.7"
+        android:background="#EB000000"
+        android:visibility="visible" />
+
+    <!--    -->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/back1"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:src="@drawable/ic_back__2_" />
+
+                <LinearLayout
+                    android:id="@+id/profileRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/back1"
+                    android:layout_marginHorizontal="@dimen/_30sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_74sdp"
+                        android:layout_height="@dimen/_74sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:elevation="@dimen/_10sdp"
+                        app:cardBackgroundColor="#E5E5E5"
+                        app:cardCornerRadius="@dimen/_37sdp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:elevation="@dimen/_10sdp"
+                            app:cardCornerRadius="@dimen/_35sdp">
+
+                            <ImageView
+                                android:id="@+id/profileCard1"
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/img1" />
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/profileName"
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="wrap_content"
+                            android:text="Eve Rigas"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_17sdp" />
+
+                        <TextView
+                            android:id="@+id/profileDetail"
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="wrap_content"
+                            android:maxLines="6"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem venenatis ipsum massa vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem venenatis ipsum massa vitae.Sem venenatis ipsum massa vitae.
+                Sem venenatis ipsum massa vitae."
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/insta"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:src="@drawable/ic_insta"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/fb"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:src="@drawable/ic_fb"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/twitter"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:src="@drawable/ic_twit"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--    -->
+
+    <RelativeLayout
+        android:id="@+id/profileCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar_layout"
+        android:background="@drawable/profile_shape"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_rectangle_81" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/profileRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                    app:spanCount="2"
+                    tools:listitem="@layout/profile_item" />
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

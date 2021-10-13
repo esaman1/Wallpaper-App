@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "563214110527",
+    "project_id": "wallpaper-c04f8",
+    "storage_bucket": "wallpaper-c04f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563214110527:android:3bab761e7892520ac0cd8a",
+        "android_client_info": {
+          "package_name": "bestwallpaper.hdgb.wallpapers.backgrounds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563214110527-fj0qrli2662i9etnakp9bo69b7lnk0q7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBApO5EAR3sm4tbp2pQzRIwAZ-Wp27Qmmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563214110527-fj0qrli2662i9etnakp9bo69b7lnk0q7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

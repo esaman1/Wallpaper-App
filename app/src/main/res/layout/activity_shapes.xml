@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bestwallpaper.hdgb.wallpapers.backgrounds.ShapesActivity">
+
+    <LinearLayout
+        android:id="@+id/stickerRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back1"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/_15sdp"
+            android:src="@drawable/ic_back__2_" />
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Stickers"
+            android:textColor="@color/dayNighttext"
+            android:textSize="@dimen/_15sdp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shapeRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/stickerRel"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        tools:listitem="@layout/shape_item" />
+
+</RelativeLayout>
